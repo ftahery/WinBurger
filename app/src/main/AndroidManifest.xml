@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".StartupActivity"
+            android:name=".SplashScreenActivity"
             android:noHistory="true">
 
             <intent-filter>
@@ -19,6 +19,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".StartupActivity"
+            android:noHistory="true" />
 
         <activity
             android:name=".Classic"
@@ -32,7 +36,14 @@
         <activity
             android:name=".Max"
             android:noHistory="true" />
-        <service android:enabled="true" android:name=".BackgroundSoundService" />
+        <activity android:name=".SelectionActivity" />
+        <activity
+            android:name=".FavFoodActivity"
+            android:noHistory="true" />
+
+        <service
+            android:name=".BackgroundSoundService"
+            android:enabled="true" />
 
     </application>
 

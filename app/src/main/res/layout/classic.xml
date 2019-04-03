@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sadia"
     tools:context=".Classic">
 
     <android.support.v7.widget.Toolbar
@@ -28,9 +27,22 @@
     </android.support.v7.widget.Toolbar>
 
     <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toStartOf="@+id/bun_image"
+        app:layout_constraintStart_toEndOf="@+id/cabbage_image"
+        app:layout_constraintTop_toTopOf="@+id/relativeLayout" />
+
+    <ImageView
         android:id="@+id/cabbage_image"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
@@ -42,7 +54,7 @@
     <ImageView
         android:id="@+id/bun_image"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -55,7 +67,7 @@
     <ImageView
         android:id="@+id/tomato_image"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -67,7 +79,7 @@
     <ImageView
         android:id="@+id/bread_image"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -79,7 +91,7 @@
     <ImageView
         android:id="@+id/cheese_image"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -91,7 +103,7 @@
     <ImageView
         android:id="@+id/jalepeno"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -103,7 +115,7 @@
     <ImageView
         android:id="@+id/patty_image"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -115,7 +127,7 @@
     <ImageView
         android:id="@+id/onion_image"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -127,7 +139,7 @@
     <ImageView
         android:id="@+id/ketchup"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -139,7 +151,7 @@
     <ImageView
         android:id="@+id/mayonnaise"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -151,7 +163,7 @@
     <ImageView
         android:id="@+id/omelette"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -163,7 +175,7 @@
     <ImageView
         android:id="@+id/cucumber"
         android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:layout_height="95dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
@@ -173,10 +185,12 @@
         app:layout_constraintTop_toBottomOf="@+id/ketchup" />
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center_horizontal"
-        app:layout_constraintBottom_toBottomOf="@+id/omelette"
+        app:layout_constraintBottom_toTopOf="@+id/done_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar_classic"
@@ -253,6 +267,96 @@
     </RelativeLayout>
 
 
+    <RelativeLayout
+        android:id="@+id/display_burger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/done_button"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/display_image_1"
+            android:layout_width="187dp"
+            android:layout_height="52dp"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.5" />
+
+        <ImageView
+            android:id="@+id/display_image_2"
+            android:layout_width="187dp"
+            android:layout_height="52dp"
+            android:layout_above="@+id/display_image_1"
+            android:layout_marginBottom="-30dp"
+            android:alpha="0.7" />
+
+        <ImageView
+            android:id="@+id/display_image_3"
+            android:layout_width="187dp"
+            android:layout_height="52dp"
+            android:layout_above="@+id/display_image_2"
+            android:layout_marginBottom="-30dp"
+            android:alpha="0.7" />
+
+        <ImageView
+            android:id="@+id/display_image_4"
+            android:layout_width="187dp"
+            android:layout_height="52dp"
+            android:layout_above="@+id/display_image_3"
+            android:layout_marginBottom="-30dp"
+            android:alpha="0.7" />
+
+        <ImageView
+            android:id="@+id/display_image_5"
+            android:layout_width="187dp"
+            android:layout_height="52dp"
+            android:layout_above="@+id/display_image_4"
+            android:layout_marginBottom="-30dp"
+            android:alpha="0.7" />
+
+        <ImageView
+            android:id="@+id/display_image_6"
+            android:layout_width="187dp"
+            android:layout_height="52dp"
+            android:layout_above="@+id/display_image_5"
+            android:layout_marginBottom="-30dp"
+            android:alpha="0.7" />
+
+        <ImageView
+            android:id="@+id/display_image_7"
+            android:layout_width="187dp"
+            android:layout_height="52dp"
+            android:layout_above="@+id/display_image_6"
+            android:layout_marginBottom="-30dp"
+            android:alpha="0.7" />
+
+        <ImageView
+            android:id="@+id/display_image_8"
+            android:layout_width="187dp"
+            android:layout_height="52dp"
+            android:layout_above="@+id/display_image_7"
+            android:layout_marginBottom="-30dp"
+            android:alpha="0.7" />
+
+        <ImageView
+            android:id="@+id/display_image_9"
+            android:layout_width="187dp"
+            android:layout_height="52dp"
+            android:layout_above="@+id/display_image_8"
+            android:layout_marginBottom="-30dp"
+            android:alpha="0.7" />
+
+        <ImageView
+            android:id="@+id/display_image_10"
+            android:layout_width="187dp"
+            android:layout_height="52dp"
+            android:layout_above="@+id/display_image_9"
+            android:layout_marginBottom="-30dp"
+            android:alpha="0.7" />
+    </RelativeLayout>
+
+
     <Button
         android:id="@+id/remove"
         android:layout_width="0dp"
@@ -260,7 +364,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:background="@drawable/rounded_button_orange_filled"
-        android:text="Back"
+        android:text="Undo"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@+id/done_button"
         app:layout_constraintStart_toStartOf="parent"

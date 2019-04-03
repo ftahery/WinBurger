@@ -48,6 +48,18 @@ public class DoubleCheese extends AppCompatActivity
   private ImageView insertImage8;
   private ImageView insertImage9;
   private ImageView insertImage10;
+
+  private ImageView displayBurger1;
+  private ImageView displayBurger2;
+  private ImageView displayBurger3;
+  private ImageView displayBurger4;
+  private ImageView displayBurger5;
+  private ImageView displayBurger6;
+  private ImageView displayBurger7;
+  private ImageView displayBurger8;
+  private ImageView displayBurger9;
+  private ImageView displayBurger10;
+
   private Button remove;
   private Button clear;
   private Button done;
@@ -106,6 +118,17 @@ public class DoubleCheese extends AppCompatActivity
     insertImage8 = findViewById(R.id.insert_image8);
     insertImage9 = findViewById(R.id.insert_image9);
     insertImage10 = findViewById(R.id.insert_image10);
+
+    displayBurger1 = findViewById(R.id.display_image_1);
+    displayBurger2 = findViewById(R.id.display_image_2);
+    displayBurger3 = findViewById(R.id.display_image_3);
+    displayBurger4 = findViewById(R.id.display_image_4);
+    displayBurger5 = findViewById(R.id.display_image_5);
+    displayBurger6 = findViewById(R.id.display_image_6);
+    displayBurger7 = findViewById(R.id.display_image_7);
+    displayBurger8 = findViewById(R.id.display_image_8);
+    displayBurger9 = findViewById(R.id.display_image_9);
+    displayBurger10 = findViewById(R.id.display_image_10);
 
     remove = findViewById(R.id.remove);
     clear = findViewById(R.id.clear);
@@ -188,6 +211,14 @@ public class DoubleCheese extends AppCompatActivity
                 insertImage5.setImageResource(0);
                 insertImage6.setImageResource(0);
                 insertImage7.setImageResource(0);
+
+                displayBurger1.setImageResource(R.drawable.bread);
+                displayBurger2.setImageResource(R.drawable.cheese);
+                displayBurger3.setImageResource(R.drawable.patty);
+                displayBurger4.setImageResource(R.drawable.cheese);
+                displayBurger5.setImageResource(R.drawable.cucumber);
+                displayBurger6.setImageResource(R.drawable.salad);
+                displayBurger7.setImageResource(R.drawable.bun);
               }
             }.start();
           }

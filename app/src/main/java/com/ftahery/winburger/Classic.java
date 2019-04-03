@@ -47,6 +47,14 @@ public class Classic extends AppCompatActivity
   private ImageView insertImage8;
   private ImageView insertImage9;
   private ImageView insertImage10;
+
+  private ImageView displayBurger1;
+  private ImageView displayBurger2;
+  private ImageView displayBurger3;
+  private ImageView displayBurger4;
+  private ImageView displayBurger5;
+  private ImageView displayBurger6;
+
   private Button remove;
   private Button clear;
   private Button done;
@@ -106,6 +114,13 @@ public class Classic extends AppCompatActivity
     insertImage9 = findViewById(R.id.insert_image9);
     insertImage10 = findViewById(R.id.insert_image10);
 
+    displayBurger1 = findViewById(R.id.display_image_1);
+    displayBurger2 = findViewById(R.id.display_image_2);
+    displayBurger3 = findViewById(R.id.display_image_3);
+    displayBurger4 = findViewById(R.id.display_image_4);
+    displayBurger5 = findViewById(R.id.display_image_5);
+    displayBurger6 = findViewById(R.id.display_image_6);
+
     remove = findViewById(R.id.remove);
     clear = findViewById(R.id.clear);
     done = findViewById(R.id.done_button);
@@ -125,18 +140,18 @@ public class Classic extends AppCompatActivity
     images.add(insertImage9);
     images.add(insertImage10);
 
-    image1.setOnClickListener(this);
-    image2.setOnClickListener(this);
-    image3.setOnClickListener(this);
-    image4.setOnClickListener(this);
-    image5.setOnClickListener(this);
-    image6.setOnClickListener(this);
-    image7.setOnClickListener(this);
-    image8.setOnClickListener(this);
-    image9.setOnClickListener(this);
-    image10.setOnClickListener(this);
-    image11.setOnClickListener(this);
-    image12.setOnClickListener(this);
+    image1.setOnTouchListener(this);
+    image2.setOnTouchListener(this);
+    image3.setOnTouchListener(this);
+    image4.setOnTouchListener(this);
+    image5.setOnTouchListener(this);
+    image6.setOnTouchListener(this);
+    image7.setOnTouchListener(this);
+    image8.setOnTouchListener(this);
+    image9.setOnTouchListener(this);
+    image10.setOnTouchListener(this);
+    image11.setOnTouchListener(this);
+    image12.setOnTouchListener(this);
 
     image1.setOnDragListener(this);
     image2.setOnDragListener(this);
@@ -184,6 +199,13 @@ public class Classic extends AppCompatActivity
                 insertImage4.setImageResource(0);
                 insertImage5.setImageResource(0);
                 insertImage6.setImageResource(0);
+
+                displayBurger1.setImageResource(R.drawable.bread);
+                displayBurger2.setImageResource(R.drawable.cheese);
+                displayBurger3.setImageResource(R.drawable.patty);
+                displayBurger4.setImageResource(R.drawable.ketchup);
+                displayBurger5.setImageResource(R.drawable.salad);
+                displayBurger6.setImageResource(R.drawable.bun);
               }
             }.start();
           }
@@ -193,9 +215,9 @@ public class Classic extends AppCompatActivity
   @Override
   public boolean onTouch(View v, MotionEvent event) {
     if (event.getAction() == MotionEvent.ACTION_DOWN) {
-     /* View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(v);
+      View.DragShadowBuilder shadowBuilder = new View.DragShadowBuilder(v);
       ClipData data = ClipData.newPlainText("", "");
-      v.startDrag(data, shadowBuilder, v, 0);*/
+      v.startDrag(data, shadowBuilder, v, 0);
       if (count < 9) {
         count++;
       }
@@ -235,8 +257,6 @@ public class Classic extends AppCompatActivity
     }
     return true;
   }
-
-
 
   @Override
   public void onClick(View v) {
@@ -332,7 +352,7 @@ public class Classic extends AppCompatActivity
             insertImage4.setImageResource(0);
             insertImage5.setImageResource(0);
             insertImage6.setImageResource(0);
-            count=-1;
+            count = -1;
           }
         });
   }
